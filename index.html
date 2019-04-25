@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My Calc</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+    <div id="calcScreen"></div>
+    <div id="calcBody">
+        
+            <!-- <div class="row firstRow"> -->
+                <Button value="/" class="btn">/</Button>
+                <Button value="*" class="btn">*</Button>
+                <Button value="del" class="btn del">Del</Button>
+            <!-- </div> -->
+
+            <!-- <div class="row secondRow"> -->
+                    <Button value="7" class="btn">7</Button>
+                    <Button value="8" class="btn">8</Button>
+                    <Button value="9" class="btn">9</Button>
+                    <Button value="-" class="btn">-</Button>
+            <!-- </div> -->
+
+            <!-- <div class="row thirdRow"> -->
+                    <Button value="4" class="btn">4</Button>
+                    <Button value="5" class="btn">5</Button>
+                    <Button value="6" class="btn">6</Button>
+                    <Button value="+" class="btn">+</Button>
+            <!-- </div> -->
+
+            <!-- <div class="row fortRow"> -->
+                    <Button value="1" class="btn">1</Button>
+                    <Button value="2" class="btn">2</Button>
+                    <Button value="3" class="btn">3</Button>
+                    <Button value="." class="btn dot">.</Button>
+            <!-- </div>  -->
+
+           <!-- <div class="row fiftRow"> -->
+                    <Button value="0" class="btn zero">0</Button>
+                    <Button value="=" class="btn equal">=</Button>
+                    
+            <!-- </div> -->
+        
+    </div>
+    </div>  
+  
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+</body>
+
+</html>
